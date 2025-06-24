@@ -1,14 +1,24 @@
-import './App.css'
-import Navbar from './components/Navbar'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Body from "./components/Body";
+import Login from "./components/Login";
+import Profile from "./components/Profile";
+
 
 function App() {
-
   return (
     <>
-      <Navbar />
-      <h1>This is a Devtinder app</h1>
+      <BrowserRouter basename="/">
+        <Routes>
+          <Route path="/" element={<Body />} >
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
