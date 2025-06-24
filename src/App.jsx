@@ -1,12 +1,12 @@
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
     <>
-      <div>
-        this is vite-react app
-      </div> 
+      <Navbar />
+      <h1>This is a Devtinder app</h1>
     </>
   )
 }
